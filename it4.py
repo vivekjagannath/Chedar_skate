@@ -1,0 +1,16 @@
+import dxl
+import time
+a = dxl.get_available_ports()
+d = dxl.dxl(a[0], 1000000)
+d.set_speed({i:200 for i in range(1,13)})
+d.set_goal_position({i:512 for i in range(1,13)})
+time.sleep(2)
+d.set_goal_position({1: 523, 2: 581, 3: 525, 4: 456, 5: 537, 6: 425, 7: 456, 8: (1023-537), 9: (1023-425), 10: (1023-523), 11: 581, 12: 525})
+time.sleep(0.5)
+d.set_goal_position({1: 510, 2: 464, 3: 561, 4: 579, 5: 469, 6: 446, 7: 579, 8: (1023-469), 9: (1023-446), 10: (1023-510), 11: 464, 12: 561})
+time.sleep(0.5)
+d.set_goal_position({1: 510, 2: 464, 3: 561, 4: 579, 5: 469, 6: 446, 7: 579, 8: (1023-469), 9: (1023-446), 10: (1023-510), 11: 464, 12: 561})
+time.sleep(0.3)
+d.set_goal_position({1: 594, 2: 537, 3: 564, 4: 486, 5: 554, 6: 435, 7: 486, 8: (1023-554), 9: (1023-435), 10: (1023-594), 11: 537, 12: 564})
+time.sleep(0.2)
+d.set_goal_position({i:512 for i in range(1,13)})
